@@ -4,9 +4,9 @@
 
 %tab-focus {
   /* Default*/
-  outline: thin dotted $warning-color;
+  outline: thin dotted $focus-color;
   /* Webkit*/
-  outline: 5px auto $warning-color;
+  outline: 5px auto $focus-color;
   outline-offset: -2px;
 }
 
@@ -78,7 +78,7 @@
   $light: $yiq-contrasted-light-default,
   $threshold: $yiq-contrasted-threshold
 ) {
-  @return if(yiq-is-light($color, $threshold), $yiq-contrasted-dark-default, $yiq-contrasted-light-default);
+  @return if(yiq-is-light($color, $threshold), $dark, $light);
 }
 
 @mixin yiq-contrasted(
